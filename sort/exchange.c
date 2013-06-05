@@ -21,3 +21,51 @@ int bubble_sort(uint32_t *array, int len)
 	}
 	return 0;
 }
+
+static int partition(uint32_t *off, int len)
+{
+	assert(off);
+
+	int low = 0;
+	int high = len - 1;
+
+	int v = off[low];
+
+	while (low != high)
+	{
+		while (low != high)
+		{
+			if (off[high] < v)
+			{
+				off[low++] = off[high];
+				break;
+			}
+			else
+				high --;
+		}
+		while (low != high)
+		{
+			if (off[low] > v)
+			{
+				off[high--] = off[low];
+				break;
+			}
+			else
+				low ++;
+		}
+	}
+
+	off[low] = v;
+	return low;
+}
+
+int quick_sort(uint32_t *array, int len)
+{
+	if (len < 2)
+		return 0;
+
+	int p = partition(array, len);
+	quick_sort(array, p);
+	quick_sort(array + p + 1, len - p - 1);
+	return 0;
+}

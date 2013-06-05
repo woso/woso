@@ -11,7 +11,7 @@
 
 
 static const char *mode_list[] = {"heap","insert","select","bubble","merge","quick", NULL};
-static const sort_func_t func_list[] = {NULL, NULL, NULL, bubble_sort, NULL, NULL, NULL};
+static const sort_func_t func_list[] = {NULL, NULL, NULL, bubble_sort, NULL, quick_sort, NULL};
 
 static void usage(const char *prog, const char *info)
 {
