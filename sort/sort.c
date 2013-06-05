@@ -10,8 +10,8 @@
 #define DEFAULT_DIST (64)
 
 
-static const char *mode_list[] = {"heap","insert","select","bubble","merge","quick", NULL};
-static const sort_func_t func_list[] = {NULL, NULL, NULL, bubble_sort, NULL, quick_sort, NULL};
+static const char *mode_list[] = {"heap","insert","select","bubble","merge","quick", "radix", NULL};
+static const sort_func_t func_list[] = {NULL, insert_sort, select_sort, bubble_sort, merge_sort, quick_sort, NULL, NULL};
 
 static void usage(const char *prog, const char *info)
 {
