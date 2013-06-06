@@ -6,7 +6,7 @@ CP	:= /bin/cp -i
 
 INCS	:=
 LIBS	:=
-CFLAGS	:= -g -Wall -fPIC
+CFLAGS	:= -g -Wall -fPIC -O3
 
 BIN		:= sort
 SRCS    := $(wildcard *.c)

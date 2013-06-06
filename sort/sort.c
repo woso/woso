@@ -7,11 +7,11 @@
 #include "sort.h"
 
 #define DEFAULT_SCALE (1024)
-#define DEFAULT_DIST (64)
+#define DEFAULT_DIST (128)
 
 
 static const char *mode_list[] = {"heap","insert","select","bubble","merge","quick", "radix", NULL};
-static const sort_func_t func_list[] = {heap_sort, insert_sort, select_sort, bubble_sort, merge_sort, quick_sort, NULL, NULL};
+static const sort_func_t func_list[] = {heap_sort, insert_sort, select_sort, bubble_sort, merge_sort, quick_sort, radix_sort, NULL};
 
 static void usage(const char *prog, const char *info)
 {
