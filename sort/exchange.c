@@ -12,7 +12,7 @@ int bubble_sort(uint32_t *array, int len)
 		{
 			if (array[j] <= array[j+1])
 				continue;
-			SWAP(array[j], array[j+1]);
+			SWAP_U32(array[j], array[j+1]);
 			swap = 1;
 		}
 

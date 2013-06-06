@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define SWAP(x,y) do{uint32_t temp=(x); (x)=(y); (y)=temp;} while(0)
+#define SWAP_U32(x,y) do{uint32_t temp=(x); (x)=(y); (y)=temp;} while(0)
 
 typedef int (*sort_func_t)(uint32_t *array, int len);
 int select_sort(uint32_t *array, int len);
